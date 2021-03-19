@@ -18,13 +18,14 @@ The goals / steps of this project are the following:
 [image5]: ./test_images_output/roi_solidWhiteCurve.jpg "ROI image"
 [image6]: ./test_images_output/hough_solidWhiteCurve.jpg "Hough line image"
 [image7]: ./test_images_output/weighted_solidWhiteCurve.jpg "Weighted image"
+
 ---
 
 ### Reflection
 
 ### 1. Describe the pipeline
 
-My pipeline consisted of 5 steps.(Defined in process_image function)
+My pipeline consisted of 6 steps.(Defined in process_image function)
 
 1. Step one
 
@@ -36,13 +37,7 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ![alt text][image1]
 
-{:.image-caption}
-*Original image*
-
 ![alt text][image2]
-
-{:.image-caption}
-*Gray scale image*
 
 2. Step two
 
@@ -73,6 +68,7 @@ Draw hough lines using hough_lines() function
 Finally, weight hough line to original image.
 
 ![alt text][image7]
+
 
 ### 2. Identify potential shortcomings with your current pipeline
 
