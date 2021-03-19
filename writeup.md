@@ -31,10 +31,6 @@ My pipeline consisted of 6 steps.(Defined in process_image function)
 
 Apply the gray scale transform using grayscale() function
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
 ![alt text][image1]
 
 ![alt text][image2]
@@ -61,6 +57,16 @@ Define ROI(region of interest) with vertices using region_of_interest() function
 
 Draw hough lines using hough_lines() function
 
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function.
+
+* Calculate slope m : (y2-y1) / (x2-x1)
+
+* Append right lane position : m > 0
+
+* Append left lane position : m < 0
+
+* Get left and right line using polyfit() function.
+
 ![alt text][image6]
 
 6. Step six
@@ -73,13 +79,13 @@ Finally, weight hough line to original image.
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One potential shortcoming would be what would happen when curves appear on road.
 
-Another shortcoming could be ...
+Another shortcoming could be happen when it pass over shade.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to detect curve and draw lane line fit curve.
 
-Another potential improvement could be to ...
+Another potential improvement could be to get ROI dynamically. 
